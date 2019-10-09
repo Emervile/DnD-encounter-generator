@@ -6,35 +6,7 @@ classes= ['Paladin', 'Ranger', 'Rogue', 'Wizard', 'Warlock', 'Sorcerer', 'Cleric
 random_character = []
 def random_character_generator():
   roll = random.randint(1,10)
-  if roll == 1:
-      random_character.append(race[0])
-      random_character.append(classes[0])
-  elif roll == 2:
-      random_character.append(race[1])
-      random_character.append(classes[1])
-  elif roll == 3:
-      random_character.append(race[2])
-      random_character.append(classes[2])
-  elif roll == 4:
-      random_character.append(race[3])
-      random_character.append(classes[3])
-  elif roll == 5:
-      random_character.append(race[4])
-      random_character.append(classes[4])
-  elif roll == 6:
-      random_character.append(race[5])
-      random_character.append(classes[5])
-  elif roll == 7:
-      random_character.append(race[6])
-      random_character.append(classes[6])
-  elif roll == 8:
-      random_character.append(race[7])
-      random_character.append(classes[7])
-  elif roll == 9:
-      random_character.append(race[8])
-      random_character.append(classes[8])
-  elif roll == 10:
-      random_character.append(race[9])
-      random_character.append(classes[9])
+  random_character.append(race[roll - 1])
+  random_character.append(classes[roll - 1])
   return random_character
 print(random_character_generator())
